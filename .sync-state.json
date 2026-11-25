@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_commit": "a21347dd45efb090bf4ae4a04fd17a65e09fc8c0",
-  "synced_at": "2026-11-25T12:00:08+00:00",
+  "synced_at": "2026-11-25T12:02:10+00:00",
   "platforms": {
     "CN_ANDROID": {
       "label": "Android",
