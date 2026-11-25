@@ -1,0 +1,47 @@
+{
+  "format_version": "1.7",
+  "platform": "CN_WEGAME",
+  "main_assembly": "AstralParty.Runtime.dll",
+  "managed_assemblies_embedded_in_main_assembly": [],
+  "managed_assemblies_embedded_in_assembly_bundle": [
+    "AstralParty.Runtime.dll",
+    "APX.crypto.bouncycastle.dll",
+    "APX.hooks.dll"
+  ],
+  "dynamic_driver": null,
+  "native_plugins_require_manual_deployment": [],
+  "native_plugin_directories": [],
+  "native_plugin_directory": "",
+  "live2d_core_native_plugin": {
+    "file": "Live2DCubismCore.dll",
+    "output_relative_path": "dependence/Live2DCubismCore.dll",
+    "readme": null,
+    "open_plugin_directory_script": null,
+    "manual_copy_required": true,
+    "target_relative_path": "Plugins/x86_64"
+  },
+  "live2d_official_runtime_resources": null,
+  "live2d_bridge_native_plugin": {
+    "file": "APXLive2DBridge.dll",
+    "output_relative_path": "dependence/APXLive2DBridge.dll",
+    "readme": null,
+    "open_plugin_directory_script": null,
+    "manual_copy_required": true,
+    "target_relative_path": "Plugins/x86_64"
+  },
+  "notes": [
+    "第三方托管 DLL 会作为 TextAsset 注入同一个 Assembly Bundle。",
+    "RunTimeAstralErrorHandler 会从已加载 AssetBundle 读取 TextAsset.bytes 并执行 Assembly.Load。",
+    "dynamic_driver 记录实际注入的独立 Driver 源码指纹、版本、DLL SHA-256 与大小，用于拒绝部署陈旧输出。",
+    "原生插件不能仅靠 Assembly Bundle 加载，需要按目标平台、架构和 DllImport 名称复制到游戏 *_Data/Plugins 对应目录。"
+  ],
+  "third_party_licenses": [
+    {
+      "assembly": "APX.crypto.bouncycastle.dll",
+      "license": "MIT",
+      "source": "https://github.com/bcgit/bc-csharp",
+      "notice": "BouncyCastle 2.7.0 / APX room messaging compatibility profile; modified platform helpers and trimmed API surface.",
+      "text": "MIT License (https://opensource.org/licenses/MIT)\n\nCopyright (c) 2000-2026 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org).\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and\nassociated documentation files (the \"Software\"), to deal in the Software without restriction,\nincluding without limitation the rights to use, copy, modify, merge, publish, distribute,\nsub license, and/or sell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions: The above copyright notice and this\npermission notice shall be included in all copies or substantial portions of the Software.\n\n**THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT\nNOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT\nOF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**\n"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "2.0",
+  "platform": "CN_ANDROID",
+  "version": "3.3.0",
+  "game_version": "3.3.0",
+  "generated_at": "2026-11-18T16:38:53+08:00",
+  "total_files": 4,
+  "total_size": 9140542,
+  "files": [
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "sha256": "10da88362ca670dacdafd9f994b62711f1503bff9c6c26a0aa958e165ab5dc5a",
+      "size": 8158062,
+      "description": "官方原版 Addressables Bundle 备份"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "sha256": "ac1f4910bc63e477f41986cc2e0841698ef0c99cdd6e1bf5455a34e00a5d9e93",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "sha256": "3cefebad76d2e73b4da7e70e405e12d8fe8cf9b2793ed1eb7c5699dce82d5816",
+      "size": 982434,
+      "description": "官方原版 Addressables Bundle 备份"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "sha256": "84bfeb973f042f9a026481d0ab17edb10d3986bf565c458fcdb97ade7db72a70",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    }
+  ]
+}

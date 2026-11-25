@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-25T12:00:08+00:00",
+  "upstream": {
+    "url": "https://cnb.cool/erinilis/apx-plugin-releases.git",
+    "commit": "a21347dd45efb090bf4ae4a04fd17a65e09fc8c0",
+    "mode": "lite"
+  },
+  "warnings": [
+    "CN_ANDROID: 大小不符 runtime_dependencies.json 清单 3110 实际 3063",
+    "CN_BILIBILI: 大小不符 runtime_dependencies.json 清单 3111 实际 3064",
+    "CN_STEAM: 大小不符 runtime_dependencies.json 清单 3108 实际 3061",
+    "CN_TAPTAP: 大小不符 runtime_dependencies.json 清单 3109 实际 3062",
+    "CN_WEGAME: 大小不符 runtime_dependencies.json 清单 3109 实际 3062"
+  ],
+  "platforms": {
+    "CN_ANDROID": {
+      "label": "Android",
+      "plugin_version": "3.3.0",
+      "game_version": "3.3.0",
+      "generated_at": "2026-11-18T16:38:53+08:00",
+      "format_version": "2.0",
+      "manifest_sha256": "4307a7969164a52cfcd99672a4e7b3a833981b740567a183bc1707ebb087e489",
+      "runtime_dependencies_sha256": "480e8dcb88b89c8504b6fa2f8a40806dd3a82bf4bec90014d6e65cba810af976",
+      "patch": {
+        "files": 8,
+        "bytes": 12362056
+      },
+      "restore": {
+        "files": 4,
+        "bytes": 9140542
+      }
+    },
+    "CN_BILIBILI": {
+      "label": "Bilibili",
+      "plugin_version": "3.3.0",
+      "game_version": "3.3.0",
+      "generated_at": "2026-11-18T16:43:11+08:00",
+      "format_version": "2.0",
+      "manifest_sha256": "5cf2ed28cce7750f3413b255c147ef362f211a69356f4d27082fa677d272cc50",
+      "runtime_dependencies_sha256": "4c969b47f1d2297230a8f96bffe42e83c7b3ab67b70ea1f6c5e3de10b87ebdbc",
+      "patch": {
+        "files": 8,
+        "bytes": 12600239
+      },
+      "restore": {
+        "files": 4,
+        "bytes": 9384494
+      }
+    },
+    "CN_STEAM": {
+      "label": "Steam 国服",
+      "plugin_version": "3.3.0",
+      "game_version": "3.3.0",
+      "generated_at": "2026-11-18T16:40:20+08:00",
+      "format_version": "2.0",
+      "manifest_sha256": "b61a6d7a0ec74962561555a909923c811b1b78543790ac0fd4946cbd7a1d1555",
+      "runtime_dependencies_sha256": "1f8e613da05cc8d99f036c77983501337298fff3ac78a5af21afafda23609400",
+      "patch": {
+        "files": 8,
+        "bytes": 12604519
+      },
+      "restore": {
+        "files": 4,
+        "bytes": 9388107
+      }
+    },
+    "CN_TAPTAP": {
+      "label": "TapTap",
+      "plugin_version": "3.3.0",
+      "game_version": "3.3.0",
+      "generated_at": "2026-11-18T16:41:46+08:00",
+      "format_version": "2.0",
+      "manifest_sha256": "d3685fb5ce32e96f440f21e2248bce3abba96219d3306e752763dd0d72896626",
+      "runtime_dependencies_sha256": "cb996526e9f6d4cf18925e3c435b720f020c79afd6bb5b1fb3208b10e32d76b6",
+      "patch": {
+        "files": 8,
+        "bytes": 12628042
+      },
+      "restore": {
+        "files": 4,
+        "bytes": 9411687
+      }
+    },
+    "CN_WEGAME": {
+      "label": "WeGame",
+      "plugin_version": "3.3.0",
+      "game_version": "3.3.0",
+      "generated_at": "2026-11-18T16:44:37+08:00",
+      "format_version": "2.0",
+      "manifest_sha256": "5b03f793ba326410490a097b7a83e83cb9bf4f1b1a94e327db2e816e614b6ae4",
+      "runtime_dependencies_sha256": "bc29cd4d973a159ce0456f8c8c0686b7e7c27d9cdb5f346893586167165bfd74",
+      "patch": {
+        "files": 8,
+        "bytes": 12601852
+      },
+      "restore": {
+        "files": 4,
+        "bytes": 9385226
+      }
+    }
+  }
+}

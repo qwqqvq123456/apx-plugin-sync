@@ -1,0 +1,96 @@
+name: Sync & Release APX Plugins
+
+on:
+  schedule:
+    # 每 6 小时一次（UTC）。上游更新频率低，6 小时足够；cost 只有几分钟。
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "即使上游无变更也打一次 Release"
+        type: boolean
+        default: false
+      platforms:
+        description: "只同步指定渠道（逗号分隔，留空=全部）"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apx-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync upstream & verify hashes
+        id: sync
+        env:
+          UPSTREAM_URL: https://cnb.cool/erinilis/apx-plugin-releases.git
+          SYNC_MODE: lite
+          FORCE_RELEASE: ${{ inputs.force }}
+          INCLUDE: ${{ inputs.platforms }}
+        run: python3 scripts/sync.py
+
+      - name: Commit mirrored files
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "工作区无差异，跳过提交"
+            exit 0
+          fi
+          git commit -m "sync(apx): ${{ steps.sync.outputs.summary }}"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          git push
+
+      - name: Build release assets
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          python3 scripts/package.py dist "${{ steps.sync.outputs.release_tag }}" "${{ steps.sync.outputs.platforms }}"
+          ls -lh dist
+
+      - name: Publish release
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.sync.outputs.release_tag }}
+          TITLE: ${{ steps.sync.outputs.release_title }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG 已存在，改为追加资产"
+            gh release upload "$TAG" dist/*.zip dist/SHA256SUMS.txt --clobber
+          else
+            gh release create "$TAG" dist/*.zip dist/SHA256SUMS.txt \
+              --title "$TITLE" \
+              --notes-file dist/RELEASE_NOTES.md \
+              --latest
+          fi
+
+      - name: Upload artifacts (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-log-${{ github.run_id }}
+          path: |
+            index.json
+            .sync-state.json
+          if-no-files-found: ignore
+          retention-days: 7

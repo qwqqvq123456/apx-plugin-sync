@@ -1,0 +1,119 @@
+{
+  "format_version": "2.0",
+  "platform": "CN_ANDROID",
+  "version": "3.3.0",
+  "game_version": "3.3.0",
+  "generated_at": "2026-11-18T16:38:53+08:00",
+  "total_patch_files": 8,
+  "total_patch_size": 12362056,
+  "total_restore_files": 4,
+  "total_restore_size": 9140542,
+  "files": [
+    {
+      "relative_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "sha256": "6d8bd59c09b0983576ceefc98b414801e7921d7e1b8019a13856efa0a78bdd15",
+      "size": 8978575,
+      "description": "APX 补丁 Addressables Bundle 数据"
+    },
+    {
+      "relative_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "sha256": "ac1f4910bc63e477f41986cc2e0841698ef0c99cdd6e1bf5455a34e00a5d9e93",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    },
+    {
+      "relative_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "sha256": "15047ed30e626940583ada4723313dd6332b5f0c5263879e813293d67266ee14",
+      "size": 3060747,
+      "description": "APX 补丁 Addressables Bundle 数据"
+    },
+    {
+      "relative_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "sha256": "84bfeb973f042f9a026481d0ab17edb10d3986bf565c458fcdb97ade7db72a70",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    },
+    {
+      "relative_path": "dependence/APXLive2DBridge.dll",
+      "target_type": "game_root",
+      "target_path": "Plugins/x86_64/APXLive2DBridge.dll",
+      "sha256": "6402986ee4b74df42aaf07371c34c2b50f9e9c0b14fd7688bbd9969df809dc95",
+      "size": 48630,
+      "description": "Live2D 官方原生运行时扩展插件 (APXLive2DBridge.dll)",
+      "locallow_target_path": "Plugins/x86_64/APXLive2DBridge.dll"
+    },
+    {
+      "relative_path": "dependence/Live2DCubismCore.dll",
+      "target_type": "game_root",
+      "target_path": "Plugins/x86_64/Live2DCubismCore.dll",
+      "sha256": "53f6b9d7d4a1f85d2ea2de4b0757185406c6f76d24fd57489604b01d02bab693",
+      "size": 239240,
+      "description": "Live2D 官方原生运行时扩展插件 (Live2DCubismCore.dll)",
+      "locallow_target_path": "Plugins/x86_64/Live2DCubismCore.dll"
+    },
+    {
+      "relative_path": "dependence/apx_modern_assist_ui.bundle",
+      "target_type": "game_root",
+      "target_path": "dependence/apx_modern_assist_ui.bundle",
+      "sha256": "116ad12fbf0553eb8eb06007a7808ba97f4be071764420ec059a6b683c8c3dbf",
+      "size": 31708,
+      "description": "APX 现代 uGUI 功能助手悬浮球与界面依赖资源包",
+      "locallow_target_path": "dependence/apx_modern_assist_ui.bundle"
+    },
+    {
+      "relative_path": "runtime_dependencies.json",
+      "target_type": "locallow",
+      "target_path": "runtime_dependencies.json",
+      "sha256": "8a78c24211edd8d06cbb66cd1ff48b4bec855f2c491fada1370ee67e54dec939",
+      "size": 3110,
+      "description": "APX 运行时程序集与插件依赖清单"
+    }
+  ],
+  "restore_files": [
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__data",
+      "sha256": "10da88362ca670dacdafd9f994b62711f1503bff9c6c26a0aa958e165ab5dc5a",
+      "size": 8158062,
+      "description": "官方原版 Addressables Bundle 备份"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/4da1f23c112208b0f8df2a1327b4e4ce/f34d1f473cc7580b5d29def0211599a4/__info",
+      "sha256": "ac1f4910bc63e477f41986cc2e0841698ef0c99cdd6e1bf5455a34e00a5d9e93",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__data",
+      "sha256": "3cefebad76d2e73b4da7e70e405e12d8fe8cf9b2793ed1eb7c5699dce82d5816",
+      "size": 982434,
+      "description": "官方原版 Addressables Bundle 备份"
+    },
+    {
+      "relative_path": "restore/com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "target_type": "locallow",
+      "target_path": "com.unity.addressables/AssetBundles/be8a6f7fa87357b26096b5a0ada25e0b/20015cbffae16dbc93e8c960492cf4a6/__info",
+      "sha256": "84bfeb973f042f9a026481d0ab17edb10d3986bf565c458fcdb97ade7db72a70",
+      "size": 23,
+      "description": "Addressables 缓存时间戳与元数据信息"
+    }
+  ],
+  "deployment_guide": {
+    "locallow_description": "部署到游戏 LocalLow 数据缓存目录 (例如 %USERPROFILE%/AppData/LocalLow/Starry/AstralParty_CN/)",
+    "game_root_description": "部署到游戏可执行文件安装主根目录 (例如 Steam 游戏目录)",
+    "dependence_path": "dependence/apx_modern_assist_ui.bundle"
+  }
+}
