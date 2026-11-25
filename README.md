@@ -49,7 +49,7 @@
 
 ## 目录结构
 
-默认 `SYNC_MODE=lite`，仓库只存清单（每渠道约 16 KB），二进制只走 Release：
+默认 `SYNC_MODE=lite`，仓库只存清单（每渠道 3 个 JSON，约 11 KB），二进制只走 Release：
 
 ```
 .
@@ -67,7 +67,7 @@
 ```
 
 `SYNC_MODE=full` 时，每个渠道目录会额外包含 `com.unity.addressables/AssetBundles/**/__data`、
-`dependence/*.dll`、`restore/**` 等二进制，体积从 16 KB 涨到约 22 MB/渠道。
+`dependence/*.dll`、`restore/**` 等二进制，体积从 11 KB 涨到约 22 MB/渠道。
 
 保留 `CN_*/` 这层目录，是为了让 raw 直链的**路径**与上游一致：
 
@@ -81,11 +81,11 @@ https://raw.githubusercontent.com/<你>/apx-plugin-sync/main/CN_STEAM/manifest.j
 
 | | `lite`（默认） | `full` |
 |---|---|---|
-| 每渠道落盘 | 3 个 JSON ≈ 16 KB | 14 个文件 ≈ 22 MB |
-| 全仓 5 渠道 | ≈ 184 KB | ≈ 105 MB |
+| 每渠道落盘 | 3 个 JSON ≈ 11 KB | 14 个文件 ≈ 22 MB |
+| 全仓 5 渠道 | ≈ 93 KB（内容），磁盘约 188 KB | ≈ 105 MB |
 | 一次上游更新增多少 | 几 KB | 9–22 MB（`__data` 为 LZ4 压缩，git 无法有效差分） |
 | 能当 raw 插件源 | 否 | 是 |
-| 二进制来源 | Release 的 zip | 仓库 + Release 各一份 |
+| 二进制来源 | Release 的 zip（约 15 MB/渠道） | 仓库 + Release 各一份 |
 
 选 `lite` 的理由：单渠道 22 MB 里有 21.6 MB 集中在 4 个 `__data` 上，而这几个文件是已压缩的
 AssetBundle，git 每改一个字节就要存一整份新 blob，且旧 blob 永不出历史，仓库只增不减。
