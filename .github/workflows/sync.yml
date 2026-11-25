@@ -38,10 +38,17 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Clone upstream (packaging source)
+        run: |
+          git clone --depth 1 --quiet https://cnb.cool/erinilis/apx-plugin-releases.git .upstream-src
+          echo "upstream commit: $(git -C .upstream-src rev-parse --short HEAD)"
+          du -sh .upstream-src
+
       - name: Sync upstream & verify hashes
         id: sync
         env:
           UPSTREAM_URL: https://cnb.cool/erinilis/apx-plugin-releases.git
+          UPSTREAM_DIR: .upstream-src
           SYNC_MODE: lite
           FORCE_RELEASE: ${{ inputs.force }}
           INCLUDE: ${{ inputs.platforms }}
@@ -63,6 +70,9 @@ jobs:
 
       - name: Build release assets
         if: steps.sync.outputs.changed == 'true'
+        env:
+          # lite 模式下仓库只有清单，二进制从上游克隆目录取
+          PACKAGE_SOURCE: .upstream-src
         run: |
           python3 scripts/package.py dist "${{ steps.sync.outputs.release_tag }}" "${{ steps.sync.outputs.platforms }}"
           ls -lh dist

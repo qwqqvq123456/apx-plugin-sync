@@ -1,6 +1,9 @@
 # 打包产物，不进版本库
 dist/
 
+# 工作流里临时克隆的上游快照，不进版本库
+.upstream-src/
+
 # Python
 __pycache__/
 *.pyc
